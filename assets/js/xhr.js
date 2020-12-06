@@ -15,7 +15,7 @@ function findBtnClickHandler () {
     const text = search_text.value;
   
     if (inputSearchTextBoxIsValid(text)) {
-      getData(`http://www.omdbapi.com/?s=${text}&apikey=18b8609f`)
+      getData(`https://www.omdbapi.com/?s=${text}&apikey=18b8609f`)
         .then(movies => movies.forEach(movie => addMovieToList(movie)))
         .catch(err => textBoxShowErrorMessage());
     } else { textBoxShowErrorMessage(); }
